@@ -16,3 +16,11 @@ class LoginPageLocators():
     REGISTRATION_PASSWORD_INPUT = (By.NAME, 'registration-password1')
     REGISTRATION_PASSWORD_REPEAT_INPUT = (By.NAME, 'registration-password2')
     REGISTRATION_FORM_SUBMIT = (By.NAME, 'registration_submit')
+
+
+class AddingItemsToTheCartLocators():
+    ADDING_TO_THE_CART_BUTTON = (By.CSS_SELECTOR, '.btn-add-to-basket')
+    PRODUCT_PRICE = (By.CSS_SELECTOR, "h1 + .price_color")
+    CART_PRICE = (By.CSS_SELECTOR, "div.alertinner > p > strong ")
+    PRODUCT_NAME_IN_THE_PAGE = (By.CSS_SELECTOR, "div.row h1")
+    PRODUCT_NAME_IN_THE_CART = (By.CSS_SELECTOR, "div.alertinner > strong")
