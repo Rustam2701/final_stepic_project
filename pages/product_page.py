@@ -23,3 +23,11 @@ class ProductPage(BasePage):
         basket_price = self.browser.find_element(*AddingItemsToTheCartLocators.CART_PRICE).text[1:]
         assert product_price == basket_price, \
             f"Product prices are different! {product_price} != {basket_price}"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*AddingItemsToTheCartLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but shouldn't be"
+
+    def should_see_as_disappearing_message(self):
+        assert self.is_disappeared(*AddingItemsToTheCartLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but could be disappeared"

@@ -23,5 +23,5 @@ class LoginPage(BasePage):
     def should_be_register_form(self):
         go_to_login_form_button = self.browser.find_element(*LoginPageLocators.GO_TO_LOGIN_PAGE_BUTTON)
         go_to_login_form_button.click()
-        lregistration_form_box = self.browser.find_element(*LoginPageLocators.REGISTRATION_FORM_BOX)
-        assert lregistration_form_box.text == 'Зарегистрироваться'
+        registration_form_box = self.browser.find_element(*LoginPageLocators.REGISTRATION_FORM_BOX)
+        assert registration_form_box.text == 'Зарегистрироваться'
